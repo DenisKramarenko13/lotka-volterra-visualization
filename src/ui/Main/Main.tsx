@@ -334,7 +334,7 @@ function Main() {
                     name=''
                     id=''
                     onChange={(e) => setX(e.target.value.length === 0 ? null : Number(e.target.value))}
-                    value={x}
+                    value={x ?? ''}
                   />
                 </div>
                 <div className={mainS.variableContainer}>
@@ -350,7 +350,7 @@ function Main() {
                     name=''
                     id=''
                     onChange={(e) => setY(e.target.value.length === 0 ? null : Number(e.target.value))}
-                    value={y}
+                    value={y ?? ''}
                   />
                 </div>
               </div>
@@ -371,7 +371,7 @@ function Main() {
                     name=''
                     id=''
                     onChange={(e) => setAlpha(e.target.value.length === 0 ? null : Number(e.target.value))}
-                    value={alpha}
+                    value={alpha ?? ''}
                   />
                 </div>
                 <div className={mainS.variableContainer}>
@@ -387,7 +387,7 @@ function Main() {
                     name=''
                     id=''
                     onChange={(e) => setBeta(e.target.value.length === 0 ? null : Number(e.target.value))}
-                    value={beta}
+                    value={beta ?? ''}
                   />
                 </div>
                 <div className={mainS.variableContainer}>
@@ -403,7 +403,7 @@ function Main() {
                     name=''
                     id=''
                     onChange={(e) => setGamma(e.target.value.length === 0 ? null : Number(e.target.value))}
-                    value={gamma}
+                    value={gamma ?? ''}
                   />
                 </div>
                 <div className={mainS.variableContainer}>
@@ -419,7 +419,7 @@ function Main() {
                     name=''
                     id=''
                     onChange={(e) => setDelta(e.target.value.length === 0 ? null : Number(e.target.value))}
-                    value={delta}
+                    value={delta ?? ''}
                   />
                 </div>
               </div>
