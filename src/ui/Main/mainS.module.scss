@@ -1,0 +1,132 @@
+// ------ canvas ------
+
+.canvas {
+}
+
+// ------ canvasContainer ------
+
+.canvasContainer {
+  width: fit-content;
+  height: fit-content;
+}
+
+// ------ canvasCover ------
+
+.canvasCover {
+  height: 300px;
+  width: 500px;
+}
+
+// ------ container ------
+
+.container {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(22, 22, 22);
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgb(77, 77, 77);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+// ------ equation ------
+
+.equation {
+  font-family: 'Cambria Math';
+  font-size: 1.2rem;
+
+  & * {
+    font-family: 'Cambria Math';
+  }
+}
+
+// ------ equationContainer ------
+
+.equationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+// ------ containerMainContent ------
+
+.containerMainContent {
+  display: flex;
+  gap: 40px;
+}
+
+// ------ actionsContainer ------
+
+.actionsContainer {
+  width: 400px;
+}
+
+// ------ variables ------
+
+.variables {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.variables__heading {
+  margin-top: 20px;
+}
+
+.variables__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+// ------ variableContainer ------
+
+.variableContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+// ------ variable ------
+
+.variable__input {
+  width: 100%;
+  background-color: rgb(22, 22, 22);
+  border: 2px solid rgb(77, 77, 77);
+  border-radius: 4px;
+  font-size: 1rem;
+  padding-left: 5px;
+  padding-block: 4px;
+
+  transition: border-color 0.2s;
+
+  &:focus {
+    outline: none;
+    border-color: rgb(120, 120, 120);
+
+    &:hover {
+      border-color: rgb(140, 140, 140);
+    }
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  &:hover {
+    border-color: rgb(100, 100, 100);
+  }
+}
+
+.variable__label {
+  font-family: 'Cambria Math';
+}

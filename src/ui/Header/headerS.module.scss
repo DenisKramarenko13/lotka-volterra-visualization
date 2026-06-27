@@ -1,0 +1,18 @@
+// ------ heading ------
+
+.heading {
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+}
+
+// ------ text ------
+
+.text__additional {
+  font-size: 1.3rem;
+  color: rgb(90, 90, 90);
+}
