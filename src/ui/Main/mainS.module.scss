@@ -76,7 +76,7 @@
 }
 
 .variables__heading {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .variables__group {
@@ -129,4 +129,21 @@
 
 .variable__label {
   font-family: 'Cambria Math';
+}
+
+// ------ button ------
+
+.button {
+  background-color: rgb(26, 26, 26);
+  border: 2px solid rgb(77, 77, 77);
+  border-radius: 20px;
+  padding-block: 5px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgb(36, 36, 36);
+  }
 }

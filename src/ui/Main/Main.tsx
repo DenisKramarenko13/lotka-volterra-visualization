@@ -269,6 +269,26 @@ function Main() {
     }
   }, [canvasPhase, data]);
 
+  const downloadCSV = useCallback(() => {
+    const [xArr, yArr, lengthArr] = data;
+    let csvContent = '\uFEFFStep;Prey (x);Predator (y)\n';
+
+    for (let i = 0; i < lengthArr.length; i++) {
+      const xStr = xArr[i].toString().replace('.', ',');
+      const yStr = yArr[i].toString().replace('.', ',');
+      csvContent += `${lengthArr[i]};${xStr};${yStr}\n`;
+    }
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'lotka-volterra-data.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }, [data]);
+
   return (
     <>
       <div className={mainS.container}>
@@ -403,6 +423,13 @@ function Main() {
                   />
                 </div>
               </div>
+              <button
+                type='button'
+                className={mainS.button}
+                onClick={downloadCSV}
+              >
+                Скачать данные (.csv)
+              </button>
             </div>
           </div>
         </div>
